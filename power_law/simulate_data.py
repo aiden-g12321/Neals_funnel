@@ -40,11 +40,11 @@ rho_inj = get_rho(log_amp_inj, gamma_inj)
 
 # simulate Gaussian noise
 sigma_inj = 1.2
-noise_seed = 0
+noise_seed = 150914
 noise = jr.normal(jr.key(noise_seed), (Nt,)) * sigma_inj
 
 # draw Fourier coefficients for signal realization
-signal_seed = 2
+signal_seed = 170817
 a_inj = jr.multivariate_normal(jr.key(signal_seed), mean=jnp.zeros(Na), cov=jnp.diag(rho_inj))
 signal_inj = F @ a_inj
 data = signal_inj + noise
