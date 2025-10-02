@@ -1,2 +1,7 @@
 # macOS Finder settings
 .DS_Store
+
+*.npy
+
+*.npz
+
